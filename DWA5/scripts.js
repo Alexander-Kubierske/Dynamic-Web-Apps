@@ -13,7 +13,7 @@ const storedErrorMessages = {
 
 const createErrorMessage = (errorType) => {
   const errorMessageElement = document.getElementById("error-message");
-  if (errorMessageElement) {
+  if (errorMessageElement !== "") {
     console.log("exists");
     errorMessageElement.textContent = storedErrorMessages[errorType];
   } else {
@@ -41,7 +41,7 @@ form.addEventListener("submit", (event) => {
 
     result.innerText = Math.floor(dividend / divider);
     const errorMessageElement = document.getElementById("error-message");
-    if (errorMessageElement) errorMessageElement.textContent = "";
+    if (errorMessageElement !== "") errorMessageElement.textContent = "";
   } catch (error) {
     if (error.message === "NaN") {
       criticalError();
