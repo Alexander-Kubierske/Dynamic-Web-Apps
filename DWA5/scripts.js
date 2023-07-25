@@ -33,8 +33,11 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
+  const validateDividend = parseFloat(dividend);
+  const validateDivider = parseFloat(divider);
   try {
-    if (isNaN(dividend) || isNaN(divider)) throw new Error("NaN");
+    if (Number.isNaN(validateDividend) || Number.isNaN(validateDivider))
+      throw new Error("NaN");
     if (dividend === "" || divider === "") throw new Error("missing input");
     if (dividend <= 0 || divider <= 0)
       throw new Error("invalid number provided");
