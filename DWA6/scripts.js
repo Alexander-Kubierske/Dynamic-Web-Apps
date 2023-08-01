@@ -10,19 +10,12 @@ import {
   htmlSelector,
 } from "./data.js";
 import { pageLoader, showMoreButton } from "./view.js";
-import {
-  handleDescriptionToggle,
-  attachEventListenersDescription,
-} from "./descriptionFunctionModule.js";
+import { attachEventListenersDescription } from "./descriptionFunctionModule.js";
 import {
   defaultTheme,
-  handleThemeToggle,
-  handleThemeSubmit,
   attachEventListenersTheme,
 } from "./themeFunctionModule.js";
 import {
-  handleSearchToggle,
-  handleSearchSubmit,
   attachEventListenersSearch,
   MATCHES,
   PAGE,
