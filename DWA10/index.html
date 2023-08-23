@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Count</title>
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&family=Prompt&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    
+    <script src="./scripts.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.7.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.7.0/cdn/shoelace-autoloader.js"></script>
+
+</head>
+<body>
+        <header class="header">
+            <h1 class="header__titles">
+                Tally Count
+            </h1>
+        </header>
+
+
+        <Main class="Counter">
+            <input class="counter__value" data-key="number" readonly value="0">
+
+            <div class="counter__actions">
+                <sl-button data-button-subtract 
+                class="counter__button counter__button_first">-</sl-button>
+                <sl-button data-button-add class="counter__button">+</sl-button>
+                <sl-button data-button-reset class="counter__button__reset">Reset</sl-button>
+            </div>
+              <sl-alert variant="primary" close closable class="alert-closable">
+                <sl-icon slot="icon" name="arrow-clockwise"></sl-icon>
+                <strong>Tally Reset</strong><br />
+                My website starting Tally from 0.
+              </sl-alert>
+
+            
+            
+
+        </Main>
+
+        <footer class="footer">
+            Inspired by <a class="footer__link" href="https://tallycount.app/">Tally Count</a>. Note this is merely aa student practice project for learning Javascript.
+        </footer>
+</body>
+</html>
