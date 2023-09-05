@@ -18,12 +18,6 @@ const products = [
 // product should be changed to name
 // price should be changed to cost
 
-// console.log(
-//   products.forEach((element) => console.log(element.product)),
-//   products.filter((element) => element.product.length < 6),
-//   products.filter((element) => element.price !== "")
-// );
-
 console.log(
   "Product Names:\n",
   products.forEach((element) => console.log(element.product)),
@@ -72,6 +66,15 @@ console.log(
   //   const highestAndLowest = `Highest: ${accumulator.highestPriceName}. Lowest: ${accumulator.lowestPriceName}`;
   //   return highestAndLowest;
   // })()
+
+  // ====== problems ======
+  // the problems i had to with this part are as follows:
+  // the difficulty with changing and outputting the string as the accumulator seems to be the difficulty.
+  // I have tried making a function in the return of the reduce but that just creates a factory function does not evaluate the function.
+  // I thus tried to make a function that wraps around the reduce method but that doesn't seem to pass the values as expected with an anon function.
+  // I have tried modifying the accumulator object before it is returned but that changes the result as I need to keep it separate from the reduce loop.
+  // All my problems point to a solution that does not have my reduce logic encapsulated in the console.log.
+
   "\nModified keys:",
   products.reduce((accumulator, currentValue) => {
     const recreatedObj = Object.entries(currentValue).reduce(
