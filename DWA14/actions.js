@@ -80,3 +80,5 @@ export const actions = {
 // console.log(state.phase); // maxnum
 // decreaseTally(); // 9
 // console.log(state.phase); // idle
+
+// in theory we should have a state that moves to the increasing and decreasing phase however it seemed unnecessary hence the functions controlling the flow state.
