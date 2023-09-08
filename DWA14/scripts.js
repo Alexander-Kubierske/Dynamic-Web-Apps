@@ -9,7 +9,7 @@ import { state } from "./state.js";
 /**
  * The state in which the app can be.
  *
- * @typedef {"idle" | "maxNum" | "minNum" | "confirmReset"} phase
+ * @typedef {"idle" | "maxNum" | "minNum" } phase
  */
 
 class TallyCounter extends LitElement {
