@@ -9,11 +9,11 @@ const products = [
 ];
 
 //   outcomes
-// Use forEach to console.log each product name to the console.
-// Use filter to filter out products that have a name longer than 5 characters
-// Using both filter and map. Convert all prices that are strings to numbers, and remove all products from the array that do not have prices. After this has been done then use reduce to calculate the combined price of all remaining products.
-// Use reduce to concatenate all product names to create the following string: banana, mango, potato, avocado, coffee and tea.
-// Use reduce to calculate both the highest and lowest-priced items. The names should be returned as the following string: Highest: coffee. Lowest: banana.
+// @Use forEach to console.log each product name to the console.
+// @Use filter to filter out products that have a name longer than 5 characters
+// @Using both filter and map. Convert all prices that are strings to numbers, and remove all products from the array that do not have prices. After this has been done then use reduce to calculate the combined price of all remaining products.
+// @Use reduce to concatenate all product names to create the following string: banana, mango, potato, avocado, coffee and tea.
+// *Use reduce to calculate both the highest and lowest-priced items. The names should be returned as the following string: Highest: coffee. Lowest: banana.
 // Using only Object.entries and reduce recreate the object with the exact same values. However, the following object keys should be changed in the new array:
 // product should be changed to name
 // price should be changed to cost
@@ -39,33 +39,33 @@ console.log(
   }, ""),
   "\nHighest and lowest price:",
   // (() => {
-  //   products.reduce(
-  //     (accumulator, currentValue) => {
-  //       const currentPrice = parseFloat(currentValue.price);
-  //       if (!isNaN(currentPrice)) {
-  //         if (currentPrice > accumulator.highestPrice) {
-  //           accumulator.highestPrice = currentPrice;
-  //           accumulator.highestPriceName = currentValue.product;
-  //         }
-  //         if (currentPrice < accumulator.lowestPrice) {
-  //           accumulator.lowestPrice = currentPrice;
-  //           accumulator.lowestPriceName = currentValue.product;
-  //         }
-  //       }
+  products.reduce(
+    (accumulator, currentValue) => {
+      const currentPrice = parseFloat(currentValue.price);
+      if (!isNaN(currentPrice)) {
+        if (currentPrice > accumulator.highestPrice) {
+          accumulator.highestPrice = currentPrice;
+          accumulator.highestPriceName = currentValue.product;
+        }
+        if (currentPrice < accumulator.lowestPrice) {
+          accumulator.lowestPrice = currentPrice;
+          accumulator.lowestPriceName = currentValue.product;
+        }
+      }
 
-  //       return accumulator;
-  //     },
-  //     {
-  //       highestPrice: 0,
-  //       lowestPrice: 500,
-  //       highestPriceName: "",
-  //       lowestPriceName: "",
-  //     }
-  //   );
+      return accumulator;
+    },
+    {
+      highestPrice: -Infinity, // 10
+      lowestPrice: Infinity, // 2
+      highestPriceName: "", // coffee
+      lowestPriceName: "", // banana
+    }
+  ),
 
   //   const highestAndLowest = `Highest: ${accumulator.highestPriceName}. Lowest: ${accumulator.lowestPriceName}`;
   //   return highestAndLowest;
-  // })()
+  // })();
 
   // ====== problems ======
   // the problems i had to with this part are as follows:
